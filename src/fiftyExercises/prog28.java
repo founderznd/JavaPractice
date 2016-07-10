@@ -4,8 +4,6 @@
 
 package fiftyExercises;
 
-import java.util.Scanner;
-
 /**
  * 对 10 个数进行排序 
  * http://www.sorting-algorithms.com
@@ -18,19 +16,17 @@ public class prog28 {
 	
 	private static int[] a = { -10, 41, -42, 34, 22, 26, 30, 1, 42, 40, -2, -8 };
 	
-	public static void setFeld(int n) {
+	public static int[] getArray() {
 		
-		a = new int[n];
-		System.out.println("input " + n + " numbers:");
-		Scanner s = new Scanner(System.in);
-		for (int i = 0; i < a.length; i++) {
-			a[i] = s.nextInt();
-		}
-		
-		s.close();
+		return a;
 	}
 	
-	public static void randomFeld(int n) {
+	public static void setArray(int[] n) {
+		
+		a = n;
+	}
+	
+	public static void randomArray(int n) {
 		
 		a = new int[n];
 		for (int i = 0; i < a.length; i++) {
@@ -280,7 +276,7 @@ public class prog28 {
 	
 	public static void main(String[] args) {
 		
-		randomFeld(9);
+		randomArray(9);
 		System.out.print("原数组为:\t\t");
 		printNumbers();
 		heapSort();
